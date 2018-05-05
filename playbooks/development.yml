@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+
+- name: development
+  hosts: all
+  gather_facts: yes
+  become: true
+
+#  roles:
+#  - role: 
+
+  tasks:
+  - debug: var=ansible_version
+  - command: id
+  - meta: end_play
+   
